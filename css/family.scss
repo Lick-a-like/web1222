@@ -1,0 +1,42 @@
+.inner {
+    width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+#hd {
+    background-color: gray;
+    .inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    a {
+        display: block;
+    }
+}
+#gnb {
+    display: flex;
+    li.d1li { //메뉴리스트
+        position: relative;
+        &:hover {
+            .d2ul {
+                display: block;
+            }
+        }
+        a.d1a { //대메뉴들 각각
+            font-size: 1.5em;
+            padding: 15px;
+        }
+        .d2ul { //소메뉴
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: orange;
+            border: 1px solid #222;
+            min-width: 120px;
+            max-width: 150px;
+            right: 0;
+        }
+    }
+}
